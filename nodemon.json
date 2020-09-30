@@ -1,0 +1,5 @@
+{
+    "verbose":false,
+    "watch":["./server"],
+    "exec": "webpack --mode=development --config webpack.common.js --open && node ./dist/server.generated.js"
+}
