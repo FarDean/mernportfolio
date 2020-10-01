@@ -27,6 +27,33 @@
   }
 }
 
+:focus {
+  outline: 3px solid var(--color--accent);
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5em 2.5em;
+  background-color: var(--color--accent);
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--font-bold);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -34,8 +61,8 @@ img {
 }
 
 body {
-  background-color: var(--color--light);
-  color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-light);
   margin: 0;
   font-family: var(--ff--primary);
   font-size: var(--fs-body);
@@ -98,7 +125,7 @@ h3 {
     width: -moz-min-content;
     width: min-content;
     margin: 0 auto;
-    grid-column-gap: 1em;
+    grid-column-gap: 1.5em;
         grid-template-areas: "img title" "img subtitle";
     -ms-grid-columns: min-content max-content;
         grid-template-columns: -webkit-min-content -webkit-max-content;
@@ -132,5 +159,140 @@ h3 {
 
 nav {
   display: none;
+}
+
+.my-services {
+  background-color: var(--color--accent);
+  color: var(--color-light);
+  background-image: url(https://images.unsplash.com/photo-1510751007277-36932aac9ebd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=677&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  text-align: center;
+}
+
+.section__title--services {
+  color: var(--color--accent);
+  position: relative;
+}
+
+.section__title--services::after {
+  content: '';
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: .5em auto 1em;
+  background-color: white;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.service:last-child {
+  margin-bottom: 4em;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .service + .service {
+    margin-left: 4em;
+  }
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  -webkit-box-shadow: var(--bs);
+          box-shadow: var(--bs);
+}
+
+@media (min-width: 800px) {
+  .about-me {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 250px;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: "title img" "subtitle img" "text img";
+    grid-column-gap: 2em;
+  }
+  .section__title--about {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: title;
+  }
+  .section__subtitle--about {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    grid-column: 1/-1;
+    position: relative;
+    left: -2em;
+    width: calc(100% + 4em);
+    padding-left: 2em;
+  }
+  .about-me__img {
+    margin-top: 3em;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.my-work {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.section__subtitle--work {
+  color: var(--color--accent);
+  font-weight: var(--font-bold);
+  margin-bottom: 2em;
+}
+
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio__item {
+  background: var(--color--accent);
+  overflow: hidden;
+}
+
+.portfolio__img {
+  -webkit-transition: opacity 0.25s linear, -webkit-transform 0.75s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: opacity 0.25s linear, -webkit-transform 0.75s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: transform 0.75s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.25s linear;
+  transition: transform 0.75s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.25s linear, -webkit-transform 0.75s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: .75;
 }
 /*# sourceMappingURL=main.css.map */

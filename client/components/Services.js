@@ -7,18 +7,19 @@ export default function Services() {
             <div className="services">
 
                 <div className="service">
-                    <h3></h3>
-                    <p></p>
+                    <h3>E-Commerce</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta qui sapiente inventore ad ducimus magnam hic libero, fugiat ex non repudiandae dolores possimus voluptatibus. Perferendis est mollitia corrupti inventore explicabo!</p>
+                    
                 </div>
 
                 <div className="service">
-                    <h3></h3>
-                    <p></p>
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, corrupti? Nulla quam magni sit? Doloribus et officia voluptatibus fugit exercitationem a neque, eveniet voluptatem sapiente nisi expedita dolore ipsam quae veniam sequi maxime, vero voluptates.</p>
                 </div>
 
                 <div className="service">
-                    <h3></h3>
-                    <p></p>
+                    <h3>React</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam error, omnis et sapiente laborum quo explicabo repudiandae magni aliquam quia fuga facere eligendi ea libero beatae ratione inventore adipisci.</p>
                 </div>
             </div>
             <a href="#work" className='btn'>My Work</a>
